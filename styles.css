@@ -1,0 +1,95 @@
+@font-face{
+    font-family: "Kanit Semibold";
+    src: url('Kanit-Semibold.ttf');
+}
+@font-face{
+    font-family: "Hind Semibold";
+    src: url('Hind-Semibold.ttf');
+}
+@font-face{
+    font-family: "Dosis";
+    src: url('Dosis-VariableFont_wght.tff');
+}
+body{
+
+}
+p{
+    font-family: Hind Semibold;
+    font-size: 18px;
+}
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 2px;
+    background-color:#dedede;
+    width: 250px;
+    float: left;
+    height: 800px;
+    position: fixed;
+    top:180px;
+}
+li a{
+    display: block;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: black;
+    width: inherit;
+    font-family: Hind Semibold;
+    font-size: 20px;
+}
+li a:hover{
+    background-color: red;
+    color: white;
+}
+h3{
+    font-family: Dosis;
+
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+td{
+    padding: 10px;
+    text-align: center;
+}
+#header{
+    background-color: red;
+    color: white;
+    position: fixed;
+    top: 0px;
+    height: 200px;
+    width:1600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#title{
+    font-family: Kanit Semibold;
+    font-size: 60px;
+}
+#navbar{
+    width:200px;
+    height:400px;
+    background-color: red;
+    text-align: left;
+}
+#content{
+    position: absolute;
+    top: 250px;
+    left:300px;
+    width:800px;
+    height: auto;
+    margin-left: 10px;
+}
+#maps {
+    height: 400px;
+    width: 100%;
+}
+.hide{
+    visibility: hidden;
+}
