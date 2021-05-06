@@ -60,6 +60,7 @@ Course Management System
 
     $choice = $_POST['choice'];
 
+
 if(isset($_POST['choice']) && $choice == "student") {
 
     header("Location: student.php" );
@@ -79,12 +80,12 @@ else
  echo "<div id=\"content\" >
     <h3>Search Courses<h3>
             <table>
-                <form action=\"\" method=\"POST\" name=\"course_mgmt\" >
+                <form action=\"student.php\" method=\"POST\" name=\"course_mgmt\" >
                     <tr>
                         <td colspan=\"\"><label for=\"choice\">Student</label>
-                            <input type=\"radio\" name=\"choice\" id=\"student\" value=\"student\">
+                            <input type=\"radio\" name=\"choice\" id=\"student\" value=\"Student\">
                             <label for=\"choice\">Faculty</label>
-                            <input type=\"radio\" name=\"choice\" id=\"faculty\" value=\"faculty\">
+                            <input type=\"radio\" name=\"choice\" id=\"faculty\" value=\"Faculty\">
                         </td>
                     </tr>
                     <tr>
@@ -97,6 +98,7 @@ else
                     
                 </form>
             </table>
+            <input type='hidden' name='type' value='<?php echo $choice; ?>'
 </div>";
 
 ?>

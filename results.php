@@ -59,31 +59,28 @@
 <?php
 
 $choice = $_POST['choice'];
+$idNum = $_POST['studentID'];
+$courseNum = $_POST['courseId'];
+$semester = $_POST['semester'];
 
-if(isset($_POST['choice']) && $choice == "student") {
-
-header("Location: student.php" );
-exit;
-
-}
-if(isset($_POST['choice']) && $choice == "faculty") {
-header("Location: faculty.php" );
-exit;
-}
-if(isset($_POST['choice']) && $choice == "goback") {
-header("Location: course_mgmt.php" );
-exit;
-}?>
+?>
 <div id="header">
 <span id="title">Course Management System<span>
 </div>
 <div id="content" >
     <table>
-
-            <tr>
-                <td><p style="font-size: 50px;"> Here are your results.</p></td>
-            </tr>
-
+        <tr>
+            <td>Type: <?php echo $choice; ?></td>
+        </tr>
+        <tr>
+            <td>Student Id: <?php echo $idNum; ?></td>
+        </tr>
+        <tr>
+            <td>Course Id: <?php echo $courseNum; ?></td>
+        </tr>
+        <tr>
+            <td>Semester: <?php echo $semester; ?></td>
+        </tr>
     </table>
 </div>
 </body>

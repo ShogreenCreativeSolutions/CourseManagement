@@ -55,20 +55,24 @@
     </style>
 </head>
 <body>
-
+<?php
+    $choice = $_POST['choice'];
+    $idNum = $_POST['idNum'];
+?>
 
 <div id="header">
 <span id="title">Course Management System<span>
 </div>
 <div id="content" >
+    <p><?php echo $idNum ?></p>
 <table>
 <form action="results.php" method="POST" name="course_mgmt" class="">
     <tr>
-        <td><label for="selectSemester">Semester: </label>
-            <select name="selectSemester" id="selectID" form="course_mgmt">
-                <option value="spring">Spring</option>
+        <td><label for="semester">Semester: </label>
+            <select name="semester" id="s" form="course_mgmt">
+                <option value="spring" selected="selected">Spring</option>
                 <option value="summer">Summer</option>
-                <option value="summer">Fall</option>
+                <option value="fall">Fall</option>
             </select>
         </td>
         <td>
@@ -86,7 +90,8 @@
         <td><input type="submit" value="Search Classes"/></td>
     <td><input type="reset" value="Clear form"/></td>
     </tr>
-
+    <input type="hidden" id="studentID" name="studentID" value="<?php echo $idNum; ?>">
+    <input type="hidden" id="choice" name="choice" value="<?php echo $choice; ?>">
 </form>
 </table>
 </div>
