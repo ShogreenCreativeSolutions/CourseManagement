@@ -26,7 +26,7 @@
         table{
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
+            width: 100%;
         }
         td{
             padding: 10px;
@@ -55,38 +55,45 @@
     </style>
 </head>
 <body>
+<?php
+$choice = 'Faculty';
 
+?>
 <div id="header">
 <span id="title">Course Management System<span>
 </div>
 <div id="content">
 <table>
-    <form action="results.php" method="POST" name="course_mgmt">
+    <form action="faculty_results.php" method="POST" name="course_mgmt">
         <tr>
-            <td>
-                <label for="selectSemester">Semester: </label>
-                <select name="selectSemester" id="selectID" form="course_mgmt">
-                    <option value="spring">Spring</option>
-                    <option value="summer">Summer</option>
-                    <option value="summer">Fall</option>
-                </select>
-            </td>
+            <td><label for="idNum">ID Number: </label><input type="text" name="idNum" id="idNum" size=\"50\" placeholder ="Enter ID number." required="required"/></td>
             <td>
                 <label for="courseId">Course: </label>
                 <input type="text" name="courseId" id="courseId" size="30" placeholder ="Enter course number." required="required"/>
-
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="semester">Semester: </label>
+                <select name="semester" id="semester" >
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Fall">Fall</option>
+                </select>
+            </td>
 
             <td><label for="selectOption">Options: </label>
-                <select name="selectOption" id="selectOption" form="course_mgmt">
-                    <option value="courses">Print Your Courses</option>
-                    <option value="roster">Print Your Roster</option>
+                <select name="selectOption" id="selectOption" >
+                    <option value="Print Courses" selected="selected">Print Your Courses</option>
+                    <option value="Print Roster">Print Your Roster</option>
                 </select>
             </td>
         </tr>
       <tr>
-        <td><input type="submit" value="Search Classes"/></td>
-        <td><input type="reset" value="Clear form"/></td>
+        <td colspan="2" style="text-align:center;"><input type="submit" value="Submit"/>
+       <input type="reset" value="Clear form"/></td>
         </tr>
+        <input type="hidden" id="choice" name="choice" value="<?php echo $choice; ?>">
     </form>
 </table>
 </div>

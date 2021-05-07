@@ -59,9 +59,10 @@
 <?php
 
 $choice = $_POST['choice'];
-$idNum = $_POST['studentID'];
+$idNum = $_POST['idNum'];
 $courseNum = $_POST['courseId'];
 $semester = $_POST['semester'];
+$action = $_POST['selectOption']
 
 ?>
 <div id="header">
@@ -73,7 +74,7 @@ $semester = $_POST['semester'];
             <td>Type: <?php echo $choice; ?></td>
         </tr>
         <tr>
-            <td>Student Id: <?php echo $idNum; ?></td>
+            <td>Faculty Id: <?php echo $idNum; ?></td>
         </tr>
         <tr>
             <td>Course Id: <?php echo $courseNum; ?></td>
@@ -81,9 +82,13 @@ $semester = $_POST['semester'];
         <tr>
             <td>Semester: <?php echo $semester; ?></td>
         </tr>
+        <tr>
+            <td>Action: <?php echo $action; ?></td>
+        </tr>
     </table>
 </div>
 </body>
 
 </html>
 
+<?php
