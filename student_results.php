@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang ="en">
 <head>
     <meta charset="utf-8">
     <title>Student</title>
@@ -33,11 +33,12 @@
 
         }
         #header{
+            font-family: Arial, sans-serif;
             font-size: 80px;
             background-color: red;
             color: white;
             position: fixed;
-            top: 0px;
+            top: 0;
             height: 200px;
             width:1600px;
             margin-left:;
@@ -49,9 +50,7 @@
             margin-top: 200px;
 
         }
-        .hide{
-            visibility: hidden;
-        }
+
     </style>
 </head>
 <body>

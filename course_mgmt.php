@@ -23,11 +23,12 @@
 
         }
         #header{
+            font-family: Arial, sans-serif;
             font-size: 80px;
             background-color: red;
             color: white;
             position: fixed;
-            top: 0px;
+            top: 0;
             height: 200px;
             width:1600px;
 
@@ -35,9 +36,6 @@
         #content{
             margin-top: 200px;
 
-        }
-        .hide{
-            visibility: hidden;
         }
     </style>
 </head>
@@ -64,6 +62,8 @@ if(!empty($_POST['choice']) && $choice == "Faculty") {
 else
 
  echo "<div id=\"content\" >
+            <p style=\"text-align:center; font-size:30px;\">Welcome to the Course Management System</p>
+            <p style=\"text-align:center;\">Select an option to continue.</p>
             <table>
                 <form action=\"\" method=\"POST\" name=\"course_mgmt\" >
                     <tr>
@@ -73,7 +73,7 @@ else
                             <input type=\"radio\" name=\"choice\" id=\"faculty\" value=\"Faculty\">
                         </td>
                     </tr>
-                        <td><input type=\"submit\" value=\"Submit\"/>
+                        <td style=\"text-align:center;\"><input type=\"submit\" value=\"Submit\"/>
                         <input type=\"reset\" value=\"Clear form\"/></td>
                     </tr>
                     

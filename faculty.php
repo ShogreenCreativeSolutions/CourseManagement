@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang ="en">
 <head>
     <meta charset="utf-8">
     <title>Faculty</title>
@@ -26,13 +26,14 @@
         table{
             margin-left: auto;
             margin-right: auto;
-            width: 100%;
+            width: 50%;
         }
         td{
             padding: 10px;
 
         }
         #header{
+            font-family: Arial, sans-serif;
             font-size: 80px;
             background-color: red;
             color: white;
@@ -48,9 +49,6 @@
         #content{
             margin-top: 200px;
 
-        }
-        .hide{
-            visibility: hidden;
         }
     </style>
 </head>
